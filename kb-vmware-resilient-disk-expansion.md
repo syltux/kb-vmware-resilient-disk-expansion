@@ -37,6 +37,7 @@ Get-Service | Where-Object Status -eq 'Running'
 # Pour arrêter les services identifiés:
 `Stop-Service -Name "NomDuServiceAArrêter" -Force`
 ```
+NB: Un script `startstopprocess.ps1`est disponible si besoin.
 
 NB: Vu qu'il n'existe pas de commande permettant de s'assurer qu'on arrête bien tous les processus serveurs en cours en une fois ainsi que tout ce qui écrit sur le disque sans rien oublier, on va inverser la logique en rendant le disque DATA E:\ accessible en Read-Only après avoir fermé le Gestionnaire de serveur.
 
