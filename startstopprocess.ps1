@@ -26,7 +26,8 @@ if($CheckIfExist.Status -eq "Stopped"){
         Stop-Service -Name $AskUserServiceToCheck
     }
 } else {
-    Write-Host "Error, status inconnu"
+    Write-Warning "Error, status inconnu : $($CheckIfExist.Status). Rendu de la main à l'utilisateur."
+    return
 }
 
 # ETAPE 05 - Message confirmant le nouvel état du service
